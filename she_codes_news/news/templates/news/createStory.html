@@ -1,11 +1,33 @@
 {% extends "base.html" %}
 
+{% load static %}
+
+{% block stylesheets %}
+<link rel='stylesheet' type='text/css' href="{% static 'news/styles.css' %}">
+{% endblock%}
+
+
 {% block content %}
 
-<form action="" method="post">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <input type="submit" value="submit">
-</form>
-
+{% if request.user.is_authenticated %}
+<div class="form">
+    <div class="form-main">
+        <h3>New story:</h3>
+        <form action="" method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <h2></h2>
+            <input type="submit" value="submit" class="btn-3">
+        </form>
+    </div>
+    
+</div>
+{% else %}
+<div class="error">
+    <div class="error-main">
+        <p> Please login or create account </p>
+    </div>
+    
+</div>
+{% endif %}
 {% endblock %}
