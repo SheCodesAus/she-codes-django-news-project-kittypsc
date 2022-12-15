@@ -8,7 +8,9 @@ class NewsStory(models.Model):
     author = models.ForeignKey(
         USER, on_delete=models.CASCADE
     )
-    # first_name = models.CharField(max_length=100)
+    first_name = models.CharField(max_length=200, default="")
+    last_name = models.CharField(max_length=200, default="")
+
     pub_date = models.DateTimeField()
     content = models.TextField()
     image_url = models.URLField(max_length=200, default="https://picsum.photos/600")

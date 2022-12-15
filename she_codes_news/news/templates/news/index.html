@@ -12,7 +12,7 @@
         <div class='Section-1-sub'>
             {% if request.user.is_authenticated %}
             Welcome back
-            <a href="{% url 'users:user' pk=user.id %}"> {{ user.username }}!</a>
+            <a href="{% url 'users:user' pk=user.id %}"> {{ user.first_name }}!</a>
         </div>
         <div>
             <button type="button" class="btn"><a href="{% url 'news:newStory' %}">Write New Story</a></button>
