@@ -25,7 +25,9 @@
 {% else %}
 <div class="error">
     <div class="error-main">
-        <p> Please login or create account </p>
+        <div class='Section-1-sub2'>
+            Please <a href="{% url 'login' %}">Login</a> or <a href="{% url 'users:createAccount' %}">SignUp</a> to add a new story.
+        </div>
     </div>
     
 </div>
