@@ -8,5 +8,8 @@
         <a href="{% url 'login' %}">Login</a>
         <a href="{% url 'users:createAccount' %}">SignUp</a>
     {% endif %}
-    
+    {% comment %} <form method="GET">
+        <input type="search" name="search" placeholder="search" value="{{ request.GET.search }}">
+
+    </form> {% endcomment %}
 </nav>

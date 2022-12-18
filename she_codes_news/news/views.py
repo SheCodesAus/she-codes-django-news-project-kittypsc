@@ -1,5 +1,7 @@
 from django.contrib.auth import get_user_model
 from django.contrib.auth.mixins import LoginRequiredMixin
+from django.shortcuts import render
+from django.http import Http404
 from django.views import generic
 from django.urls import reverse_lazy
 from .models import NewsStory
@@ -21,6 +23,23 @@ class IndexView(generic.ListView):
         context['all_stories'] = NewsStory.objects.all().order_by('-pub_date') [:3]
         # context['author_stories'] = NewsStory.objects.filter()
         return context
+
+    # def search_news(request):
+    #     if request.method == 'GET':
+    #         search = request.GET.get('search')
+    #     try:
+    #         article = NewsStory.objects.get(title=search)
+    #         return render(request, 'article_detail.html', {'article': article})
+    #     except NewsStory.DoesNotExist:
+    #         raise Http404("NewsStory not found")
+    
+    # def search_news(request):
+    #     query = request.GET.get('q')
+    #     news = NewsStory.objects.filter(title__icontains=query)
+    #     return render(request, 'search_results.html', {'news': news})
+
+
+    
 
 class StoryView(generic.DetailView):
     model = NewsStory
