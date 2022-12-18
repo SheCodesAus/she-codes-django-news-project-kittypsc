@@ -8,7 +8,7 @@
             <h3>{{ story.title }}</h3>
             <h5>Date published: {{ story.pub_date }}</h4>
             <h4>Author: {{ story.author }}</h4>
-            <button class="btn-2"><a href="{% url 'news:story' story.id %}"></a>Read more</button>
+            <button type="button" class="btn-2"><a href="{% url 'news:story' story.id %}">Read more</button></a>
             
         </div>
     

@@ -179,6 +179,10 @@ p {
     cursor: pointer;
 }
 
+.btn-2 a{
+    color: #fff;
+}
+
 .btn-3 {
     display: flex;
     align-items: center;
@@ -238,7 +242,7 @@ p {
 }
 
 .section-2-sub-1 img {
-    justify-content: left;
+    justify-content: center;
     margin: 0;
     width: 280px;
     height: 160px;
@@ -306,6 +310,13 @@ p {
     padding: 5px;
     justify-content: center;
 
+}
+
+.story-card-img img {
+    /* display: inline;
+    position: relative; */
+    justify-content: center;
+    width: 280px;
 }
 
 .story-card-text {
@@ -453,3 +464,10 @@ p {
     color:rgb(98, 12, 178);
     padding-bottom: 20px;
 }
+
+/* footer *{
+    display: block;
+    background-color: rgb(140, 59, 216);
+    width: 100%;
+    padding: 20px;
+} */
