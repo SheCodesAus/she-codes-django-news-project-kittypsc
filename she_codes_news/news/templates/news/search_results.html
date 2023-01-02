@@ -1,0 +1,9 @@
+{% if news %}
+    <p>{{ news|length }} results found:</p>
+    {% for story in news %}
+        <h2>{{ story.title }}</h2>
+        <p>{{ story.author }}</p>
+    {% endfor %}
+{% else %}
+    <p>No results found.</p>
+{% endif %}

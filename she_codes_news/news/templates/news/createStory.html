@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block stylesheets %}
+<link rel='stylesheet' type='text/css' href="{% static 'news/styles.css' %}">
+{% endblock%}
+
+
+{% block content %}
+
+{% if request.user.is_authenticated %}
+<div class="form">
+    <div class="form-main">
+        <h3>New story:</h3>
+        <form action="" method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <h2></h2>
+            <input type="submit" value="submit" class="btn-3">
+        </form>
+    </div>
+    
+</div>
+{% else %}
+<div class="error">
+    <div class="error-main">
+        <div class='Section-1-sub2'>
+            Please <a href="{% url 'login' %}">Login</a> or <a href="{% url 'users:createAccount' %}">SignUp</a> to add a new story.
+        </div>
+    </div>
+    
+</div>
+{% endif %}
+{% endblock %}

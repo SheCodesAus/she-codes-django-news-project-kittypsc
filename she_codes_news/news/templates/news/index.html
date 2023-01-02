@@ -1,21 +1,62 @@
-    <h2>Latest News</h2>
+    {% extends "base.html" %}
+    {% load static%}
 
-    <div id="latest-stories">
-        {% if latest_stories %}
-            {% for story in latest_stories %}
-                <p>{{ story.title }}</p>
-            {% endfor %}
+    {% block stylesheets %}
+    <link rel="stylesheet" type="text/css" href="{% static 'news/styles.css' %}">
+    {% endblock %}
+
+    {% block content %}
+
+
+    <div class='Section-1'>
+        {% if request.user.is_authenticated %}
+            <div class='Section-1-sub'>
+                Welcome back
+                <a href="{% url 'users:user' pk=user.id %}"> {{ user.first_name }}!</a>
+            </div>
+            <div>
+                <button type="button" class="btn"><a href="{% url 'news:newStory' %}">Write New Story</a></button>
+            </div>
         {% else %}
-            <p>No stories are available.</p>
+            <div class='Section-1-sub2'>
+                Please <a href="{% url 'login' %}">Login</a> or <a href="{% url 'users:createAccount' %}">SignUp</a> to add a new story.
+            </div>
         {% endif %}
     </div>
-
-    <div id="all-stories">
-        {% if latest_stories %}
-            {% for story in all_stories %}
-                <p>{{ story.title }}</p>
-            {% endfor %}
-        {% else %}
-            <p>No stories are available.</p>
-        {% endif %}
+    <div class="section-2">
+        <div class="section-2-sub-1">
+            <div class="section-2-sub-1-header">
+                <h2>Latest News</h2>
+            </div>
+            
+            <div id="latest-stories">
+                
+                {% if latest_stories %}
+                    {% for story in latest_stories %}
+                        {% include './storyCard.html' with story=story position=forloop.counter %}
+                    {% endfor %}
+                {% else %}
+                    <p>No stories are available.</p>
+                {% endif %}
+                </div>
+    
+        <div>
     </div>
+    <div class="section-3">
+        <div class="section-3-sub-1">
+            <h2>All News Stories</h2>
+            <div id="all-stories">
+                {% if all_stories %}
+                    {% for story in all_stories %}
+                        {% include './storyCard.html' with story=story %}
+                    {% endfor %}
+                {% else %}
+                    <p>No stories are available.</p>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+        
+
+    {% endblock %}
+

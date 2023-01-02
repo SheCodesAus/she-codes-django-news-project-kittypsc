@@ -1,29 +1,72 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat+Subrayada:wght@700&display=swap');
+
+*{ 
+    font-family: 'Poppins', sans-serif;
+}
+
 
 body {
-    background-color: rgb(240, 239, 239);
+    display: flex-start;
+    background-color: rgb(240, 240, 240);
 }
 
 header {
-    display: flex;
+    /* display: flex;
     align-items: center;
     justify-content: space-between;
-    border-bottom: 1px solid #000;
+    border-bottom: 1px solid #000; */
+    width: 100%;
+    height: 40vh;
+    background-image: linear-gradient(rgba(11, 9, 10, 0.3),rgba(230, 166, 217, 0.3)), url(../static/news/images/cupcakes.jpeg);
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    
 }
 
-img {
-    filter: grayscale(100%);
+.header h1{
+    margin: 0;
+    padding: 0;
+    padding-right: 40px;
+    justify-content: right;
 }
+
+.header p{
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    margin: -20px;
+    padding: -20px;
+    
+}
+
+.logo {
+    width: 40%;
+    height: 40%;
+    display: flex;
+    padding: 20vh 10vh;
+
+}
+
+/* img {
+    filter: grayscale(100%);
+} */
 
 h1 {
-    font-family: 'Montserrat Subrayada', sans-serif;
+    font-family: 'Poppins', sans-serif;
     text-decoration: none;
     font-size: 4rem;
-    margin: 0;
+    
+    color: #fff;
+    align-items: center;
+    justify-content: right;
+    font-size: 40px;
+
 }
 
 h2 {
-   font-family: 'Montserrat Subrayada', sans-serif; 
+   font-family: 'Poppins', sans-serif; 
+   color:rgb(0, 0, 0)
 }
 
 h3 {
@@ -31,24 +74,400 @@ h3 {
     margin: 0;
 }
 
-#header-text {
-    flex-basis: 80%;
-    display: flex;
+
+
+.navbar {
+    background-color: rgb(140, 59, 216);
 }
 
+.nav-text {
+    justify-content: right;
+    padding-right: 20px;
+}
+
+.nav-text a {
+    color: #fff;
+    align-items: flex-start;
+    justify-items: right;
+    color:#fff;
+    padding-right: 100px;
+    padding: 15px;
+}
+
+
 nav {
-    flex-basis: 20%;
+    /* flex-basis: 20%; */
     display: flex;
-    flex-direction: column;
-    align-items: flex-end;
+    align-items: top;
+    color: rgb(98, 12, 178);
+    justify-items: center;
 }
 
 a {
     margin: 2px;
     text-decoration: none;
     color: #000;
+    align-items: top;
+
+    
 }
 
-a, p {
+p {
     font-family: monospace;
+    color: #000;
 }
+
+.Section-1 {
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    padding: 20px;
+    background-color: #fff;
+    height: 20px;
+    
+
+    
+}
+
+.Section-1-sub {
+    padding: 20px;
+    justify-content: left;
+ 
+}
+
+.Section-1-sub a{
+    color:rgb(160, 81, 233);
+}
+
+.Section-1-sub2 a{
+    color:rgb(160, 81, 233);
+
+}
+
+.btn {
+    /* display: flex; */
+    /* align-items: center; */
+    border: 0;
+    outline: 0;
+    border-radius: 5px;
+    background-color: rgb(246, 175, 51);
+    font-weight: 500;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.btn a {
+    
+    color: #000;
+    font-weight: 500;
+    
+}
+
+.btn-2 {
+    display: flex;
+    align-items: center;
+    justify-items: right;
+    border: 0;
+    outline: 0;
+    border-radius: 5px;
+    background-color: rgb(98, 12, 178);
+    color: #fff;
+    font-weight: 500;
+    font-size: 8px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.btn-2 a{
+    color: #fff;
+}
+
+.btn-3 {
+    display: flex;
+    align-items: center;
+    justify-items: right;
+    border: 0;
+    outline: 0;
+    border-radius: 5px;
+    background-color: rgb(98, 12, 178);
+    color: #fff;
+    font-weight: 500;
+    font-size: 12px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+
+/* section 2 */
+
+.section-2 {
+    /* position: absolute; */
+    display: block;
+    /* margin-top: 650px; */
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    width: 100%;
+    height: 600px;
+}
+
+.section-2-sub-1 {
+
+    position: relative;
+    display: inline;
+    justify-content: center;
+    align-items: center;
+    width: 600px;
+
+}
+
+/* .section-2-sub-1-header{
+    width: 600px;
+    background-color: #fff;
+    display: flex;
+    position: relative;
+    justify-content: center;
+} */
+.section-2-sub-1 h2 {
+    /* margin-left: 325px; */
+    display: flex;
+    position: relative;
+    justify-content: center;
+    /* padding: 10px; */
+    
+    
+    
+
+}
+
+.section-2-sub-1 img {
+    justify-content: center;
+    margin: 0;
+    width: 280px;
+    height: 160px;
+ 
+}
+
+#latest-stories {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: top;
+}
+
+/* section 3 */
+
+.section-3 {
+    position: relative;
+    display: wrap;
+
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    width: 100%;
+    height: 600px;
+}
+
+.section-3-sub-1 {
+
+    position: relative;
+    display: inline;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+
+}
+
+.section-3-sub-1 h2 {
+    /* margin-left: 325px; */
+    display: flex;
+    position: relative;
+    justify-content: center;
+    /* padding: 10px; */
+}
+
+.section-3-sub-1 img {
+    justify-content: left;
+    margin: 0;
+    width: 280px;
+    height: 160px;
+ 
+}
+
+#all-stories {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: top;
+}
+
+
+/* individual stories */
+
+.story-card {
+    display: inline;
+    padding: 5px;
+    justify-content: center;
+
+}
+
+.story-card-img img {
+    /* display: inline;
+    position: relative; */
+    justify-content: center;
+    width: 280px;
+}
+
+.story-card-text {
+    /* display: wrap; */
+    /* justify-content: center; */
+    background-color: rgb(199, 196, 196);
+    width: 200px;
+    height: 200px;
+    padding: 40px;
+
+}
+
+.story-card-text h3 {
+
+    display: wrap;
+    font-size: 18px;
+    font-weight: 900;
+    padding: 0;
+}
+
+.story-card-text h5 {
+
+    display: wrap;
+    font-size: 10px;
+    font-weight: 900;
+    justify-content: center;
+}
+
+.story-card-text h4 {
+
+    display: wrap;
+    font-size: 10px;
+    font-weight: 900;
+    justify-content: center;
+    color:#fff;
+}
+
+/* New Story page */
+
+.form {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.form-main {
+    margin-top: 30px;
+    background-color: #fff;
+    padding: 40px;
+    width: 400px;
+}
+
+.form-main h3{
+    color:rgb(98, 12, 178);
+    padding-bottom: 20px;
+}
+
+/* Profile page */
+
+.user {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.user-main {
+    margin-top: 30px;
+    background-color: #fff;
+    padding: 40px;
+    width: 400px;
+}
+
+.user-main h3{
+    color:rgb(98, 12, 178);
+    padding-bottom: 20px;
+}
+
+/* Page if user trying to create story without logging in/account */
+.error{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.error-main {
+    display: flex;
+    margin-top: 30px;
+    background-color: #fff;
+    padding: 40px;
+    width: 100%;
+    justify-content: center;
+
+}
+
+.error-main p{
+    
+    color:rgb(98, 12, 178);
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Login page */
+
+.login {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.login-main {
+    margin-top: 30px;
+    background-color: #fff;
+    padding: 40px;
+    width: 400px;
+
+}
+
+.login-main h2{
+    color:rgb(98, 12, 178);
+    padding-bottom: 20px;
+}
+
+/* Create Account page */
+
+.create-account {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.create-account-main {
+    margin-top: 30px;
+    display: space-between;
+    background-color: #fff;
+    padding: 40px;
+    width: 800px;
+
+}
+
+.create-account-main h2{
+    color:rgb(98, 12, 178);
+    padding-bottom: 20px;
+}
+
+/* footer *{
+    display: block;
+    background-color: rgb(140, 59, 216);
+    width: 100%;
+    padding: 20px;
+} */

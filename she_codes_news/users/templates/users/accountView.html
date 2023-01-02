@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="user">
+    <div class="user-main">
+        <h3>Profile Details</h3>
+        <h4>Username: {{ user.username }}<h4>
+        <h4>First name: {{ user.first_name }}<h4>
+        <h4>Last name: {{ user.last_name }}<h4>
+        <h4>Email: {{ user.email }}</h4>
+        <h4>Account created: {{ user.date_joined }}</h4>
+    </div>
+</div>
+
+<div class="user">
+    <div class="user-main">
+        <h3>Your stories</h3>
+        <div id="author_stories">
+            {% if user.author_stories %}
+                {% for story in user.author_stories.all %}
+                    {% include 'news/storyCard.html' with story=story %}
+                {% endfor %}
+            {% else %}
+                <h4>No stories are available.</h4>
+            {% endif %}
+        </div>
+    </div>
+</div>
+
+{% endblock %}
